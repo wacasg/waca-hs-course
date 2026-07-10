@@ -152,11 +152,13 @@
   .courses{display:grid;gap:20px;margin-top:38px;grid-template-columns:1fr}
   .course{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
   .course:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .course .cap-top{height:96px;display:flex;align-items:center;justify-content:center;position:relative}
+  .course .cap-top{min-height:88px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;padding:24px 16px}
   .course.c1 .cap-top{background:linear-gradient(135deg,#fde4d6,#fbcfe0)}
   .course.c2 .cap-top{background:linear-gradient(135deg,#e6efff,#cfe0ff)}
   .course.c3 .cap-top{background:linear-gradient(135deg,#fff0d6,#ffe1ad)}
-  .course .cap-top svg{width:56px;height:56px}
+  .course .cap-top svg{width:42px;height:42px;flex:none}
+  .course .qname{font-family:var(--f-display);font-weight:900;font-size:1.16rem;line-height:1.15;color:var(--ink)}
+  .course .qname small{display:block;font-size:.56em;font-weight:700;letter-spacing:.02em;color:var(--muted);margin-top:3px}
   .course .no{position:absolute;left:16px;top:14px;font-family:var(--f-lat);font-weight:700;font-size:.72rem;letter-spacing:.1em;color:#fff;background:rgba(19,31,59,.85);border-radius:7px;padding:3px 9px}
   .course .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
   .course .date{font-family:var(--f-lat);font-weight:700;color:var(--sakura);font-size:.82rem;letter-spacing:.03em}
@@ -226,6 +228,13 @@
   .final>*{position:relative}
   .final h2{font-size:clamp(1.5rem,4.5vw,2.3rem)}
   .final p{color:#cfd5e8;margin:14px auto 26px;max-width:30em}
+  .form-embed{background:#fff;border-radius:18px;padding:8px;margin:0 auto 22px;max-width:680px;box-shadow:0 20px 50px -24px rgba(0,0,0,.6);overflow:hidden}
+  .form-embed iframe{width:100%;height:760px;border:none;display:block;border-radius:12px}
+  .apply-alt{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px}
+  .qr-block{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:10px 14px}
+  .qr-block .qr-img{width:96px;height:96px;background:#fff;border-radius:8px;padding:5px;flex:none}
+  .qr-block span{font-size:.82rem;color:#cfd5e8;font-weight:700;max-width:9em;text-align:left;line-height:1.35}
+  @media(max-width:520px){.form-embed iframe{height:840px}}
 
   footer.site{background:var(--ink);color:#c6cce0;padding:44px 0 34px;font-size:.86rem}
   footer .cols{display:grid;grid-template-columns:1fr;gap:24px}
@@ -409,11 +418,11 @@ event:
     </div>
     <aside class="buzz" aria-hidden="true">
       <div class="follower-card">
-        <span class="lbl">FOLLOWERS</span>
-        <div class="val"><span class="count-follow" data-count="1000000">0</span><span class="unit">人</span></div>
-        <span class="up">▲ 100万人 突破</span><br><span class="burst-label">💬 1,000コメント/秒</span>
+        <span class="lbl">FOLLOWERS <span style="font-weight:600;opacity:.55;margin-left:.35em">※イメージ</span></span>
+        <div class="val"><span class="count-follow" data-count="12800">0</span><span class="unit">人</span></div>
+        <span class="up">▲ フォロワー増加中</span><br><span class="burst-label">🎬 つくる側の景色</span>
         <div class="buzz-stream">
-          <div class="bcm"><span class="em">🔥</span>この投稿バズってる！</div>
+          <div class="bcm"><span class="em">🔥</span>この投稿いいね！</div>
           <div class="bcm"><span class="em">💬</span>どうやって伸ばしたの？</div>
         </div>
       </div>
@@ -474,6 +483,7 @@ event:
         <div class="cap-top">
           <span class="no">DAY 1・2</span>
           <svg viewBox="0 0 64 64" fill="none"><path d="M20 44l-8 8V26a10 10 0 0110-10h24a10 10 0 0110 10v6a10 10 0 01-10 10H20z" stroke="#e8663c" stroke-width="3" stroke-linejoin="round"/><circle cx="26" cy="29" r="2.6" fill="#e8663c"/><circle cx="34" cy="29" r="2.6" fill="#e8663c"/><circle cx="42" cy="29" r="2.6" fill="#e8663c"/></svg>
+          <span class="qname">SNSマネージャー<small>資格対策講座</small></span>
         </div>
         <div class="body">
           <span class="date">8.1 SAT – 8.2 SUN</span>
@@ -490,6 +500,7 @@ event:
         <div class="cap-top">
           <span class="no">DAY 1・2</span>
           <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="16" stroke="#1f52c9" stroke-width="3"/><circle cx="32" cy="32" r="8" stroke="#1f52c9" stroke-width="3"/><circle cx="32" cy="32" r="2.4" fill="#1f52c9"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6" stroke="#1f52c9" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="qname">ウェブ広告マネージャー<small>資格対策講座</small></span>
         </div>
         <div class="body">
           <span class="date">8.8 SAT – 8.9 SUN</span>
@@ -506,6 +517,7 @@ event:
         <div class="cap-top">
           <span class="no">DAY 1・2</span>
           <svg viewBox="0 0 64 64" fill="none"><path d="M14 46h36" stroke="#e08b14" stroke-width="3" stroke-linecap="round"/><rect x="18" y="34" width="7" height="10" rx="1.5" fill="#f0a534"/><rect x="30" y="26" width="7" height="18" rx="1.5" fill="#f0a534"/><rect x="42" y="18" width="7" height="26" rx="1.5" fill="#f0a534"/><path d="M18 30l12-8 8 5 12-11" stroke="#e08b14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="qname">ウェブ解析士<small>対策講座</small></span>
         </div>
         <div class="body">
           <span class="date">8.22 SAT – 8.23 SUN</span>
@@ -669,7 +681,16 @@ event:
     <span class="eyebrow" style="color:#ffc9a8;justify-content:center">Apply now</span>
     <h2>この夏、渋谷で。<br>最初の一歩を、0円で。</h2>
     <p>各講座 定員20名の事前予約制です。定員に達し次第、締め切ります。お早めにお申し込みください。</p>
-    <a class="btn js-apply" href="#" style="font-size:1.1rem;padding:17px 40px">無料で申し込む</a>
+    <div class="form-embed">
+      <iframe title="お申し込みフォーム" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=tKh9X76ZUU-LOoexZa-EvANYBBhxQD1LjZF61jvh9eZUNUpIQVFRSlFWUzdVU0c5WlpWRlBWRURYWS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="apply-alt">
+      <a class="btn js-apply" href="#" style="font-size:1.05rem">別ウィンドウでフォームを開く</a>
+      <div class="qr-block">
+        <img class="qr-img" src="qr.svg" alt="お申し込みフォームのQRコード" width="96" height="96" loading="lazy">
+        <span>スマホで読み取って申し込む</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -709,7 +730,7 @@ event:
 <!-- ================= CONFIG（ここだけ編集） ================= -->
 <script id="config">
   window.CONFIG = {
-    formUrl:   "#",                 // 申込フォーム（Microsoft Forms）のURL
+    formUrl:   "https://forms.cloud.microsoft/r/E1J6bSJxmk", // 申込フォーム（Microsoft Forms）のURL
     contact:   "",                  // 問い合わせ先（空なら既定表示）
     privacyUrl:"#",                 // 個人情報の取扱いページURL
     caseUrl:   "https://www.waca.or.jp/feedback/wac50018221/", // 高校生事例
@@ -762,15 +783,15 @@ event:
       d.style.left=(Math.random()*30)+'%'; d.style.animation='cmtfast '+(0.9+Math.random()*0.5)+'s linear forwards';
       box.appendChild(d); setTimeout(function(){d.remove();},1600); }
     if(fc){ var box=document.querySelector('.buzz-stream');
-      if(rm){ fc.textContent=(1000000).toLocaleString(); }
+      if(rm){ fc.textContent=(12800).toLocaleString(); }
       else { (function(){
-        var t=1000000,st=null,dur=2000,cur=0,exploded=false;
+        var t=12800,st=null,dur=2000,cur=0,exploded=false;
         function step(ts){ if(!st)st=ts; var pr=Math.min((ts-st)/dur,1); var e=Math.pow(pr,2.6); cur=Math.floor(e*t); fc.textContent=cur.toLocaleString();
           if(pr<1){requestAnimationFrame(step);} else if(!exploded){ exploded=true; explode(); } }
         function explode(){ var card=document.querySelector('.follower-card'); if(card){card.classList.add('boom');}
           var lbl=document.querySelector('.burst-label'); if(lbl){lbl.style.opacity='1';}
           if(box){ box.querySelectorAll('.bcm').forEach(function(x){x.remove();}); setInterval(function(){ spawnComment(box); }, 70); }
-          setInterval(function(){ cur+=Math.floor(800+Math.random()*5200); fc.textContent=cur.toLocaleString(); },100); }
+          setInterval(function(){ cur+=Math.floor(1+Math.random()*6); fc.textContent=cur.toLocaleString(); },110); }
         requestAnimationFrame(step);
       })(); } }
     if(rm){ document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in');}); document.querySelectorAll('.count').forEach(function(c){c.textContent=(+c.getAttribute('data-count')).toLocaleString();}); }

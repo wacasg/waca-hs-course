@@ -30,7 +30,7 @@
 <style>
   :root{
     --ink:#131f3b; --muted:#5b6480; --paper:#fff; --mist:#f3f5fb;
-    --sakura:#0f9d8f; --sakura-wash:#d9f3ef; --blue:#1f52c9; --blue-wash:#e9f0ff;
+    --sakura:#e8663c; --sakura-wash:#fdeae1; --blue:#1f52c9; --blue-wash:#e9f0ff;
     --gold:#f0a534; --line:#e3e7f1;
     --shadow:0 20px 50px -24px rgba(19,31,59,.45); --shadow-sm:0 8px 24px -16px rgba(19,31,59,.5);
     --r:18px; --maxw:1080px;
@@ -44,13 +44,14 @@
   h1,h2,h3{font-family:var(--f-display);line-height:1.3;margin:0;font-weight:900}
   p{margin:0}
   a{color:inherit}
+  del{text-decoration-thickness:3px}
   img,svg{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
   .eyebrow{font-family:var(--f-lat);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;color:var(--sakura);display:inline-flex;gap:.5em;align-items:center}
   .eyebrow::before{content:"";width:26px;height:2px;background:var(--sakura)}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--f-display);font-weight:700;font-size:1.02rem;background:var(--sakura);color:#fff;border:none;border-radius:999px;padding:15px 30px;text-decoration:none;cursor:pointer;box-shadow:0 12px 26px -10px rgba(15,157,143,.7);transition:transform .18s,box-shadow .18s;white-space:nowrap}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 18px 32px -10px rgba(15,157,143,.85)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--f-display);font-weight:700;font-size:1.02rem;background:var(--sakura);color:#fff;border:none;border-radius:999px;padding:15px 30px;text-decoration:none;cursor:pointer;box-shadow:0 12px 26px -10px rgba(232,102,60,.7);transition:transform .18s,box-shadow .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 18px 32px -10px rgba(232,102,60,.85)}
   .btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
   .btn--sm{padding:11px 20px;font-size:.9rem}
 
@@ -87,13 +88,13 @@
   .hero-veil{position:absolute;inset:0;background:linear-gradient(115deg,rgba(11,20,40,.8) 0%,rgba(11,20,40,.42) 52%,rgba(11,20,40,0) 100%)}
   .buzz{position:absolute;right:4%;top:12%;width:min(320px,44vw);z-index:2;pointer-events:none}
   .hero-qr{display:flex;align-items:center;gap:10px;background:rgba(16,27,52,.82);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:10px 14px;margin-bottom:12px;box-shadow:0 12px 26px -14px rgba(0,0,0,.6)}
-  .hero-qr img{width:60px;height:60px;background:#fff;border-radius:8px;padding:4px;flex:none}
-  .hero-qr span{font-size:.78rem;color:#e7ecfb;font-weight:700;line-height:1.35}
+  .hero-qr img{width:124px;height:124px;background:#fff;border-radius:10px;padding:6px;flex:none}
+  .hero-qr span{font-size:.92rem;color:#e7ecfb;font-weight:700;line-height:1.4}
   .follower-card{background:rgba(16,27,52,.82);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px 18px;box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
   .follower-card .lbl{font-size:.72rem;color:#a9b1cc;font-weight:700;letter-spacing:.08em}
   .follower-card .val{font-family:var(--f-lat);font-weight:700;font-size:clamp(1.6rem,4.6vw,2.3rem);color:#fff;line-height:1.1}
-  .follower-card .val .unit{font-size:.55em;color:#a3ece2;margin-left:.15em}
-  .follower-card .up{display:inline-flex;align-items:center;gap:.35em;color:#5eead4;font-size:.78rem;font-weight:700;margin-top:4px}
+  .follower-card .val .unit{font-size:.55em;color:#ffc9a8;margin-left:.15em}
+  .follower-card .up{display:inline-flex;align-items:center;gap:.35em;color:#ffb27d;font-size:.78rem;font-weight:700;margin-top:4px}
   .buzz-stream{position:relative;height:150px;margin-top:12px;overflow:hidden;mask-image:linear-gradient(180deg,transparent,black 18%,black 82%,transparent)}
   .bcm{position:absolute;left:0;right:0;display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.94);color:#131f3b;border-radius:999px;padding:7px 14px;font-size:.78rem;font-weight:700;box-shadow:0 8px 18px -10px rgba(0,0,0,.5);opacity:0;animation:cmt 9s linear infinite;white-space:nowrap}
   .bcm .em{flex:none}
@@ -117,18 +118,18 @@
   .course-link:hover{text-decoration:underline}
   .pcard-link{color:var(--blue);font-weight:700;font-size:.9rem;text-decoration:none}
   .pcard-link:hover{text-decoration:underline}
-  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#0f9d8f,#a3ece2);z-index:200;pointer-events:none}
+  .scroll-progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#e8663c,#ffc9a8);z-index:200;pointer-events:none}
   .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background-size:cover;background-position:center}
   .hero-shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(9,16,34,.93) 0%,rgba(9,16,34,.78) 45%,rgba(9,16,34,.55) 100%)}
   .hero .motif{position:absolute;inset:0;width:100%;height:100%}
   .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:60px 22px 72px}
-  .hero .chip{display:inline-flex;align-items:center;gap:.5em;background:var(--sakura);color:#fff;border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:700;font-family:var(--f-display);margin-bottom:20px;box-shadow:0 10px 22px -12px rgba(15,157,143,.9)}
+  .hero .chip{display:inline-flex;align-items:center;gap:.5em;background:var(--sakura);color:#fff;border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:700;font-family:var(--f-display);margin-bottom:20px;box-shadow:0 10px 22px -12px rgba(232,102,60,.9)}
   .hero h1{font-size:clamp(2.2rem,7vw,4rem);letter-spacing:.01em}
-  .hero h1 .hl{color:#a3ece2}
+  .hero h1 .hl{color:#ffc9a8}
   .hero .lead{margin-top:18px;max-width:32em;color:#d3d9ea;font-size:clamp(1rem,2.4vw,1.16rem);font-weight:500}
   .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
   .fact{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:9px 14px;font-size:.85rem;font-weight:700;font-family:var(--f-display)}
-  .fact b{color:#a3ece2;font-family:var(--f-lat)}
+  .fact b{color:#ffc9a8;font-family:var(--f-lat)}
   .hero .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
   .hero .cap{font-size:.78rem;color:#a9b1cc}
   .photo-tag{position:absolute;right:14px;bottom:12px;z-index:3;font-size:.64rem;color:#c3cae0;border:1px dashed rgba(255,255,255,.4);border-radius:8px;padding:5px 9px;background:rgba(0,0,0,.28);font-family:var(--f-lat)}
@@ -140,12 +141,13 @@
   .mist{background:var(--mist)}
 
   /* value hook */
-  .value{background:linear-gradient(135deg,#0f9d8f 0%,#0b7d72 100%);color:#fff;text-align:center;padding:56px 0}
+  .value{background:linear-gradient(135deg,#e8663c 0%,#c94e2a 100%);color:#fff;text-align:center;padding:56px 0}
   .value .big{font-family:var(--f-display);font-weight:900;font-size:clamp(2.2rem,8vw,4.2rem);line-height:1.05}
-  .value .big .zero{color:#fff;background:#fff;color:#0b7d72;border-radius:16px;padding:0 .18em;display:inline-block;transform:rotate(-2deg)}
+  .value .big .zero{color:#fff;background:#fff;color:#c94e2a;border-radius:16px;padding:0 .18em;display:inline-block;transform:rotate(-2deg)}
   .value .strike{margin-top:20px;display:inline-flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;font-size:1rem;font-weight:700}
   .value .strike span{background:rgba(255,255,255,.14);border-radius:10px;padding:8px 14px}
   .value .strike del{opacity:.85}
+  del{text-decoration-line:line-through;text-decoration-thickness:.16em;text-decoration-color:currentColor}
   .value .note{margin-top:16px;font-size:.85rem;color:#ffe1ea}
 
   /* points */
@@ -160,7 +162,7 @@
   .course{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
   .course:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
   .course .cap-top{min-height:88px;display:flex;align-items:center;justify-content:center;gap:14px;position:relative;padding:24px 16px}
-  .course.c1 .cap-top{background:linear-gradient(135deg,#d6f3ee,#fbcfe0)}
+  .course.c1 .cap-top{background:linear-gradient(135deg,#fde4d6,#fbcfe0)}
   .course.c2 .cap-top{background:linear-gradient(135deg,#e6efff,#cfe0ff)}
   .course.c3 .cap-top{background:linear-gradient(135deg,#fff0d6,#ffe1ad)}
   .course .cap-top svg{width:42px;height:42px;flex:none}
@@ -194,12 +196,12 @@
   .step .idx{flex:none;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-family:var(--f-lat);font-weight:700;background:var(--blue-wash);color:var(--blue);font-size:1rem}
   .step h3{font-size:1.04rem}
   .step p{color:var(--muted);font-size:.88rem;margin-top:4px}
-  .reward{margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--sakura-wash);border:1px solid #a9e5dd;border-radius:12px;padding:10px 14px}
+  .reward{margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:var(--sakura-wash);border:1px solid #f6cdb4;border-radius:12px;padding:10px 14px}
   .reward .tag{background:var(--sakura);color:#fff;font-family:var(--f-display);font-weight:700;font-size:.8rem;border-radius:8px;padding:4px 10px;white-space:nowrap}
   .reward .txt{font-size:.85rem;font-weight:700}
   .reward .txt small{display:block;font-weight:500;color:var(--muted);font-size:.75rem}
-  .reward--free{background:#e7f6ef;border-color:#bfe6d2}
-  .tag--free{background:#11a37f}
+  .reward--free{background:#fdefe6;border-color:#f3cdb6}
+  .tag--free{background:#e8663c}
   .path-foot{margin-top:16px;font-size:.8rem;color:var(--muted)}
 
   /* overview */
@@ -231,7 +233,7 @@
 
   /* final */
   .final{background:linear-gradient(135deg,#131f3b 0%,#26346b 100%);color:#fff;text-align:center;border-radius:24px;padding:56px 26px;margin:24px auto;max-width:var(--maxw);position:relative;overflow:hidden}
-  .final::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 80% 0%,rgba(15,157,143,.35),transparent 55%)}
+  .final::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 80% 0%,rgba(232,102,60,.35),transparent 55%)}
   .final>*{position:relative}
   .final h2{font-size:clamp(1.5rem,4.5vw,2.3rem)}
   .final p{color:#cfd5e8;margin:14px auto 26px;max-width:30em}
@@ -240,14 +242,14 @@
   .apply-alt{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px}
   .qr-block{display:flex;flex-direction:column;align-items:center;gap:0;background:linear-gradient(160deg,var(--sakura) 0%,#0b1e3d 100%);border-radius:16px;padding:16px 20px 18px;box-shadow:0 16px 34px -16px rgba(0,0,0,.55);max-width:230px}
   .qr-block .qr-head{font-family:var(--f-display);font-weight:900;font-size:.86rem;color:#fff;text-align:center;line-height:1.4;margin-bottom:12px}
-  .qr-block .qr-img{width:104px;height:104px;background:#fff;border-radius:10px;padding:6px;flex:none}
+  .qr-block .qr-img{width:180px;height:180px;background:#fff;border-radius:12px;padding:8px;flex:none}
   .qr-block .qr-cap{margin-top:10px;font-size:.78rem;color:#eef1fb;font-weight:700;text-align:center;line-height:1.35}
   @media(max-width:520px){.form-embed iframe{height:840px}}
 
   .share-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:var(--mist);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px}
   .share-card h3{font-size:1.1rem;margin-top:6px}
   .share-card p{color:var(--muted);font-size:.92rem;margin-top:6px;max-width:32em}
-  .share-qr img{width:104px;height:104px;background:#fff;border-radius:10px;padding:6px;border:1px solid var(--line);flex:none}
+  .share-qr img{width:190px;height:190px;background:#fff;border-radius:12px;padding:8px;border:1px solid var(--line);flex:none}
 
   footer.site{background:var(--ink);color:#c6cce0;padding:44px 0 34px;font-size:.86rem}
   footer .cols{display:grid;grid-template-columns:1fr;gap:24px}
@@ -431,8 +433,8 @@ event:
   <div class="hero-bg" aria-hidden="true"></div>
   <svg class="hero-illo" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs>
-      <radialGradient id="glowP" cx="80%" cy="18%" r="52%"><stop offset="0" stop-color="#0f9d8f" stop-opacity=".5"/><stop offset="1" stop-color="#0f9d8f" stop-opacity="0"/></radialGradient>
-      <linearGradient id="lineG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#3a4f7d"/><stop offset=".55" stop-color="#0f9d8f"/><stop offset="1" stop-color="#a3ece2"/></linearGradient>
+      <radialGradient id="glowP" cx="80%" cy="18%" r="52%"><stop offset="0" stop-color="#e8663c" stop-opacity=".5"/><stop offset="1" stop-color="#e8663c" stop-opacity="0"/></radialGradient>
+      <linearGradient id="lineG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#6b4a3d"/><stop offset=".55" stop-color="#e8663c"/><stop offset="1" stop-color="#ffc9a8"/></linearGradient>
     </defs>
     <rect width="1200" height="720" fill="url(#glowP)"/>
     <g opacity=".07" stroke="#fff" stroke-width="1"><path d="M0 180H1200M0 360H1200M0 540H1200"/><path d="M300 0V720M600 0V720M900 0V720"/></g>
@@ -440,17 +442,17 @@ event:
     <!-- 前半は地を這う。中盤から乱高下しつつ、最後は画面外へ突き抜ける爆上がり -->
     <polyline class="zig" points="40,640 140,636 240,641 330,628 420,634 470,600 520,616 570,560 610,590 660,505 700,545 740,440 775,485 815,350 845,400 885,255 915,305 950,165 975,215 1010,88 1035,130 1070,10 1100,45 1130,-40"
       fill="none" stroke="url(#lineG)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" pathLength="1000"/>
-    <circle class="zig-dot" cx="0" cy="0" r="9" fill="#a3ece2">
+    <circle class="zig-dot" cx="0" cy="0" r="9" fill="#ffc9a8">
       <animateMotion dur="2.4s" fill="freeze" keyPoints="0;1" keyTimes="0;1" calcMode="linear"
         path="M40,640 L140,636 240,641 330,628 420,634 470,600 520,616 570,560 610,590 660,505 700,545 740,440 775,485 815,350 845,400 885,255 915,305 950,165 975,215 1010,88 1035,130 1070,10 1100,45 1130,-40"/>
     </circle>
-    <g class="pulse-pt" transform="translate(1070,10)"><circle r="10" fill="#a3ece2"/><circle class="pulse-ring" r="12" fill="none" stroke="#a3ece2" stroke-width="3"/><circle class="pulse-ring d2" r="12" fill="none" stroke="#0f9d8f" stroke-width="2"/></g>
+    <g class="pulse-pt" transform="translate(1070,10)"><circle r="10" fill="#ffc9a8"/><circle class="pulse-ring" r="12" fill="none" stroke="#ffc9a8" stroke-width="3"/><circle class="pulse-ring d2" r="12" fill="none" stroke="#e8663c" stroke-width="2"/></g>
     <!-- 反応ワードが弾ける -->
     <g font-family="Space Grotesk,sans-serif" font-weight="700">
-      <text class="pop w1" x="600" y="470" fill="#a3ece2" font-size="26">LIKE</text>
+      <text class="pop w1" x="600" y="470" fill="#ffc9a8" font-size="26">LIKE</text>
       <text class="pop w2" x="760" y="330" fill="#ffd98a" font-size="30">LOVE</text>
       <text class="pop w3" x="905" y="205" fill="#7aa2ff" font-size="24">SHARE</text>
-      <text class="pop w4" x="990" y="120" fill="#a3ece2" font-size="28">VIEWS</text>
+      <text class="pop w4" x="990" y="120" fill="#ffc9a8" font-size="28">VIEWS</text>
       <text class="pop w5" x="510" y="560" fill="#ff9db1" font-size="22">♥ +9,999</text>
     </g>
   </svg>
@@ -472,7 +474,7 @@ event:
     </div>
     <aside class="buzz">
       <div class="hero-qr">
-        <img src="qr-lp-share.svg" alt="このページのQRコード" width="64" height="64" loading="lazy">
+        <img src="qr-lp-share.svg" alt="このページのQRコード" width="124" height="124" loading="lazy">
         <span>QRで今すぐ<br>友達にシェア</span>
       </div>
       <div class="follower-card" aria-hidden="true">
@@ -509,7 +511,7 @@ event:
     <div class="sec-head reveal"><span class="eyebrow">Why join</span><h2>高校生のうちに動くと、こんなにいい。</h2></div>
     <div class="points">
       <div class="point reveal">
-        <svg class="ic" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#d9f3ef"/><path d="M16 30l-4 4v-6a8 8 0 018-8h8a8 8 0 010 16h-8" stroke="#0f9d8f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="ic" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#fdeae1"/><path d="M16 30l-4 4v-6a8 8 0 018-8h8a8 8 0 010 16h-8" stroke="#e8663c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>スキマ時間じゃなく、"実力"に</h3>
         <p>毎日なんとなく使っているSNSやネットを、仕事につながる知識とスキルに変えられます。</p>
       </div>
@@ -577,7 +579,7 @@ event:
       <article class="course c1 reveal">
         <div class="cap-top">
           <span class="no">DAY 1・2</span>
-          <svg viewBox="0 0 64 64" fill="none"><path d="M20 44l-8 8V26a10 10 0 0110-10h24a10 10 0 0110 10v6a10 10 0 01-10 10H20z" stroke="#0f9d8f" stroke-width="3" stroke-linejoin="round"/><circle cx="26" cy="29" r="2.6" fill="#0f9d8f"/><circle cx="34" cy="29" r="2.6" fill="#0f9d8f"/><circle cx="42" cy="29" r="2.6" fill="#0f9d8f"/></svg>
+          <svg viewBox="0 0 64 64" fill="none"><path d="M20 44l-8 8V26a10 10 0 0110-10h24a10 10 0 0110 10v6a10 10 0 01-10 10H20z" stroke="#e8663c" stroke-width="3" stroke-linejoin="round"/><circle cx="26" cy="29" r="2.6" fill="#e8663c"/><circle cx="34" cy="29" r="2.6" fill="#e8663c"/><circle cx="42" cy="29" r="2.6" fill="#e8663c"/></svg>
           <span class="qname">SNSマネージャー<small>資格対策講座</small></span>
         </div>
         <div class="body">
@@ -676,14 +678,11 @@ event:
       <img class="cimg big" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_06.jpg" alt="ウェブ解析士会議 会場の様子" loading="lazy" onerror="this.remove()">
       <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_01.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
       <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_02.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_03.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_04.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_05.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_06.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_07.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
-      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2024/09/web_2024_08.jpg" alt="ウェブ解析士会議" loading="lazy" onerror="this.remove()">
+      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2026/06/image1-2-1200x702.jpg" alt="上級ウェブ解析士アワード 2026（日本経済大学 渋谷キャンパスにて）" loading="lazy" onerror="this.remove()">
+      <img class="cimg" src="https://www.waca.or.jp/wp-content/uploads/2026/06/image3-1200x711.jpg" alt="上級ウェブ解析士アワード 2026（日本経済大学 渋谷キャンパスにて）" loading="lazy" onerror="this.remove()">
+      <img class="cimg big" src="https://www.waca.or.jp/wp-content/uploads/2026/06/image4-1200x665.jpg" alt="上級ウェブ解析士アワード 2026 受賞者集合写真" loading="lazy" onerror="this.remove()">
     </div>
-    <p class="collage-credit reveal">ウェブ解析士会議 2024（撮影：イイダマサユキ氏）</p>
+    <p class="collage-credit reveal">ウェブ解析士会議 2024（撮影：イイダマサユキ氏）／上級ウェブ解析士アワード 2026（会場：日本経済大学 渋谷キャンパス）</p>
   </div>
 </section>
 
@@ -737,7 +736,7 @@ event:
 <!-- ================= FINAL CTA ================= -->
 <section id="apply" style="padding:40px 0">
   <div class="final reveal">
-    <span class="eyebrow" style="color:#a3ece2;justify-content:center">Apply now</span>
+    <span class="eyebrow" style="color:#ffc9a8;justify-content:center">Apply now</span>
     <h2>この夏、渋谷で。<br>最初の一歩を、無料で。</h2>
     <p>各講座 定員20名の事前予約制です。定員に達し次第、締め切ります。お早めにお申し込みください。</p>
     <div class="form-embed">
@@ -747,7 +746,7 @@ event:
       <a class="btn js-apply" href="#" style="font-size:1.05rem">別ウィンドウでフォームを開く</a>
       <div class="qr-block">
         <span class="qr-head">WACA認定 デジタルマーケティング資格取得講座<br>参加申込</span>
-        <img class="qr-img" src="qr.svg" alt="お申し込みフォームのQRコード" width="104" height="104" loading="lazy">
+        <img class="qr-img" src="qr.svg" alt="お申し込みフォームのQRコード" width="180" height="180" loading="lazy">
         <span class="qr-cap">スマホで読み取って申し込む</span>
       </div>
     </div>
@@ -764,7 +763,7 @@ event:
         <p>QRコードを見せるだけで、友達もこのページにアクセスできます。</p>
       </div>
       <div class="share-qr">
-        <img src="qr-lp-share.svg" alt="このページ（特設サイト）のQRコード" width="104" height="104" loading="lazy">
+        <img src="qr-lp-share.svg" alt="このページ（特設サイト）のQRコード" width="190" height="190" loading="lazy">
       </div>
     </div>
   </div>

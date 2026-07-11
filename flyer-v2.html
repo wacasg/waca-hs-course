@@ -28,6 +28,8 @@
   /* header */
   .brand{display:flex;justify-content:space-between;align-items:center;font-size:9.5pt;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);padding-bottom:6px}
   .brand b{color:var(--ink)}
+  .brand .org{display:flex;align-items:center;gap:7px}
+  .brand .org img{height:22px;width:auto;display:block}
 
   .hero{margin-top:12px;background:linear-gradient(150deg,#0d1730 0%,#12213f 52%,#15507a 100%);color:#fff;border-radius:14px;padding:20px 22px;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;background:radial-gradient(circle,rgba(15,157,143,.55),transparent 62%)}
@@ -102,8 +104,8 @@
   <div class="pad">
 
     <div class="brand">
-      <span>主催：<b>日本経済大学</b></span>
-      <span>後援：<b>一般社団法人ウェブ解析士協会（WACA）</b></span>
+      <span class="org"><img src="logo-jue.svg" alt="日本経済大学">主催：<b>日本経済大学</b></span>
+      <span class="org"><img src="logo-waca.png" alt="WACA">後援：<b>一般社団法人ウェブ解析士協会（WACA）</b></span>
     </div>
 
     <section class="hero">

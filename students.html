@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--
+  ============================================================
+  日本経済大学 在学生向け デジタル資格講座 LP（日/英/中 3言語切替）
+  ・在学生特典: 受講料・テキスト無料／認定試験の受験料 半額
+  ・高校生向け(index-v2.html)と区別するためエメラルドグリーン基調
+  ・言語切替: ヘッダーのボタン / URLパラメータ ?lang=ja|en|zh
+  ============================================================
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>在学生は受講無料・受験料半額｜WACA認定 デジタルマーケティング資格取得講座｜日本経済大学</title>
+<meta name="description" content="日本経済大学の在学生は受講料・公式テキスト無料、認定試験の受験料半額。WACA公認の3資格(SNS/ウェブ広告/ウェブ解析士)を渋谷サクラステージで。2026年8月開催。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0e3226; --muted:#4d7263; --green:#149e67; --green-deep:#0b7a4e; --green-wash:#e7f8f0;
+    --gold:#f7b32b; --line:#d3e9de; --paper:#fff; --mist:#f2faf6;
+    --shadow:0 20px 50px -24px rgba(14,50,38,.45); --shadow-sm:0 8px 24px -16px rgba(14,50,38,.5);
+    --r:18px; --maxw:1080px;
+    --f-display:"Zen Kaku Gothic New","Noto Sans JP","Noto Sans SC",system-ui,sans-serif;
+    --f-body:"Noto Sans JP","Noto Sans SC",system-ui,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+    --f-lat:"Space Grotesk","Noto Sans JP",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--f-body);color:var(--ink);background:var(--paper);line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased}
+  @media(max-width:640px){body{font-size:19px}}
+  h1,h2,h3{font-family:var(--f-display);line-height:1.3;margin:0;font-weight:900}
+  p{margin:0}
+  a{color:inherit}
+  img,svg{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:var(--f-lat);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:var(--green);display:inline-flex;gap:.5em;align-items:center}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--green)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--f-display);font-weight:700;font-size:1.02rem;background:var(--green);color:#fff;border:none;border-radius:999px;padding:15px 30px;text-decoration:none;cursor:pointer;box-shadow:0 12px 26px -10px rgba(20,158,103,.7);transition:transform .18s;white-space:nowrap}
+  .btn:hover{transform:translateY(-2px)}
+  .btn--sm{padding:11px 20px;font-size:.9rem}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  .site .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 22px;max-width:var(--maxw);margin:0 auto}
+  .brands{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-logo{display:flex;align-items:center;height:26px}
+  .brand-logo img{height:100%;width:auto;display:block}
+  .brands .x{color:#b9d6c8}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .lang{display:flex;gap:4px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .lang button{font:inherit;font-size:.8rem;font-weight:700;border:none;background:transparent;color:var(--muted);border-radius:999px;padding:5px 12px;cursor:pointer}
+  .lang button.on{background:var(--green);color:#fff}
+
+  .hero{position:relative;overflow:hidden;background:linear-gradient(170deg,#f0fbf5 0%,#d3f2e2 48%,#a8e3c6 100%);border-bottom:1px solid var(--line)}
+  .hero::before{content:"";position:absolute;right:8%;top:64px;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle,#ffd75e 0%,#f7b32b 62%,transparent 63%);box-shadow:0 0 0 16px rgba(247,179,43,.16),0 0 0 32px rgba(247,179,43,.07)}
+  .hero::after{content:"";position:absolute;right:-40px;bottom:-70px;width:380px;height:150px;border-radius:80px;background:rgba(255,255,255,.7);box-shadow:-200px -24px 0 -16px rgba(255,255,255,.55),-360px 12px 0 -34px rgba(255,255,255,.45)}
+  .hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:64px 22px 72px}
+  .hero .chip{display:inline-flex;align-items:center;gap:.5em;background:var(--green);color:#fff;border-radius:999px;padding:7px 16px;font-size:.85rem;font-weight:700;font-family:var(--f-display);margin-bottom:20px;box-shadow:0 10px 22px -12px rgba(20,158,103,.9)}
+  .hero h1{font-size:clamp(2rem,6.4vw,3.6rem);letter-spacing:.01em}
+  .hero h1 .hl{color:var(--green-deep)}
+  .hero .lead{margin-top:18px;max-width:34em;color:#3a6653;font-size:clamp(1rem,2.4vw,1.16rem);font-weight:500}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .fact{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.88);border:1px solid #b5e3cc;border-radius:12px;padding:9px 14px;font-size:.9rem;font-weight:700;font-family:var(--f-display)}
+  .fact b{color:var(--green-deep);font-family:var(--f-lat)}
+  .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .cta-row .cap{font-size:.84rem;color:#4d7263}
+  .summer{position:absolute;right:22px;bottom:14px;z-index:2;font-family:var(--f-lat);font-weight:700;letter-spacing:.22em;font-size:.8rem;color:var(--green-deep)}
+
+  section{padding:72px 0}
+  .sec-head h2{font-size:clamp(1.6rem,4.4vw,2.4rem);margin-top:12px}
+  .sec-head .sub{color:var(--muted);margin-top:14px;font-weight:500;max-width:40em}
+  .mist{background:var(--mist)}
+
+  .courses{display:grid;gap:20px;margin-top:38px;grid-template-columns:1fr}
+  @media(min-width:860px){.courses{grid-template-columns:repeat(3,1fr)}}
+  .course{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+  .course .cap-top{min-height:74px;display:flex;align-items:center;gap:12px;padding:18px 18px}
+  .course.c1 .cap-top{background:linear-gradient(135deg,#e3f6ed,#f4fcf8)}
+  .course.c2 .cap-top{background:linear-gradient(135deg,#e2f7ec,#f4fcf8)}
+  .course.c3 .cap-top{background:linear-gradient(135deg,#fff3d9,#fffaf0)}
+  .course .cap-top svg{width:38px;height:38px;flex:none}
+  .course .qname{font-family:var(--f-display);font-weight:900;font-size:1.08rem;line-height:1.2}
+  .course .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .course .date{font-family:var(--f-lat);font-weight:700;color:var(--green-deep);font-size:.84rem;letter-spacing:.03em}
+  .course h3{font-size:.96rem;font-weight:700}
+  .course .foot{margin-top:auto;padding-top:6px;font-weight:700;font-size:.84rem;color:var(--muted)}
+
+  .bene{margin-top:38px;background:linear-gradient(135deg,#0b7a4e 0%,#149e67 100%);color:#fff;border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow)}
+  .bene h3{font-size:1.2rem;margin-bottom:14px}
+  .bene ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  @media(min-width:760px){.bene ul{grid-template-columns:repeat(3,1fr)}}
+  .bene li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:14px 16px;font-weight:700;font-size:.95rem;line-height:1.6}
+  .bene li .big{display:block;font-family:var(--f-display);font-weight:900;font-size:1.25rem;color:#ffd75e;margin-bottom:4px}
+  del{text-decoration-line:line-through;text-decoration-thickness:.16em}
+
+  .ov{margin-top:38px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .ov .rowi{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+  .ov .rowi:first-child{border-top:none}
+  @media(min-width:640px){.ov .rowi{grid-template-columns:170px 1fr}}
+  .ov dt{background:var(--mist);padding:14px 16px;font-weight:700;font-family:var(--f-display);font-size:.94rem;margin:0}
+  .ov dd{margin:0;padding:14px 18px;font-size:.97rem}
+  .ov strong{color:var(--green-deep)}
+  .ov dl{margin:0}
+
+  .final{background:linear-gradient(135deg,#0e3226 0%,#155c40 100%);color:#fff;text-align:center;border-radius:24px;padding:56px 26px;margin:24px auto;max-width:var(--maxw);position:relative;overflow:hidden}
+  .final::after{content:"";position:absolute;inset:0;background:radial-gradient(90% 120% at 80% 0%,rgba(20,158,103,.4),transparent 55%)}
+  .final>*{position:relative}
+  .final h2{font-size:clamp(1.5rem,4.5vw,2.2rem)}
+  .final p{color:#cfe8dc;margin:14px auto 26px;max-width:32em}
+  .form-embed{background:#fff;border-radius:18px;padding:8px;margin:0 auto 22px;max-width:680px;box-shadow:0 20px 50px -24px rgba(0,0,0,.6);overflow:hidden}
+  .form-embed iframe{width:100%;height:760px;border:none;display:block;border-radius:12px}
+  @media(max-width:520px){.form-embed iframe{height:840px}}
+  .apply-alt{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:22px}
+  .qr-block{display:flex;flex-direction:column;align-items:center;background:linear-gradient(160deg,var(--green) 0%,#062d1f 100%);border-radius:16px;padding:16px 20px 18px;box-shadow:0 16px 34px -16px rgba(0,0,0,.55);max-width:250px}
+  .qr-block .qr-head{font-family:var(--f-display);font-weight:900;font-size:.88rem;color:#fff;text-align:center;line-height:1.4;margin-bottom:12px}
+  .qr-block img{width:170px;height:170px;background:#fff;border-radius:12px;padding:8px}
+  .qr-block .qr-cap{margin-top:10px;font-size:.8rem;color:#e7f6ef;font-weight:700;text-align:center}
+
+  footer.site{background:var(--ink);color:#cfe0d8;padding:40px 0 32px;font-size:.9rem;border:0}
+  footer .fine{margin-top:8px;color:#9dbcae;font-size:.8rem}
+  .foot-logos{display:flex;gap:12px;margin-bottom:14px}
+  .foot-logo-chip{background:#fff;border-radius:8px;padding:6px 12px;display:flex;align-items:center;height:30px}
+  .foot-logo-chip img{height:100%;width:auto;display:block}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="row">
+    <div class="brands">
+      <a class="brand-logo" href="https://www.jue.ac.jp/" target="_blank" rel="noopener"><img src="logo-jue.svg" alt="日本経済大学"></a>
+      <span class="x">×</span>
+      <a class="brand-logo" href="https://www.waca.or.jp/" target="_blank" rel="noopener"><img src="logo-waca.png" alt="WACA"></a>
+    </div>
+    <nav class="nav-cta">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ja" class="on">日本語</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="zh">中文</button>
+      </div>
+      <a class="btn btn--sm js-apply" href="#apply" data-i18n="nav_apply">申し込む</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <div class="hero-inner">
+    <span class="chip" data-i18n="chip">🎓 在学生は 受講料・テキスト無料／受験料 半額</span>
+    <h1><span data-i18n="h1a">いつものSNSを、</span><span class="hl" data-i18n="h1hl">"就活の武器"</span><span data-i18n="h1b">に。</span><br><span data-i18n="h1c">夏の2日間で、公認資格。</span></h1>
+    <p class="lead" data-i18n="lead">WACA公認の3資格（SNS／ウェブ広告／ウェブ解析士）を、渋谷サクラステージのSTATIOで。学部・学年不問。2026年8月開催。</p>
+    <div class="facts">
+      <span class="fact"><span data-i18n="f1a">受講</span> <b data-i18n="f1b">無料</b></span>
+      <span class="fact"><span data-i18n="f2a">受験料</span> <b data-i18n="f2b">半額</b></span>
+      <span class="fact"><span data-i18n="f3a">各講座 定員</span><b>20</b><span data-i18n="f3b">名</span></span>
+      <span class="fact"><b>2026.8</b> <span data-i18n="f4">渋谷</span></span>
+    </div>
+    <div class="cta-row">
+      <a class="btn js-apply" href="#apply" data-i18n="cta">申し込む</a>
+      <span class="cap" data-i18n="cta_cap">定員に達し次第、締め切ります。</span>
+    </div>
+  </div>
+  <span class="summer">2026 SUMMER</span>
+</section>
+
+<!-- COURSES -->
+<section id="courses" class="mist">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">3 Courses</span>
+      <h2 data-i18n="c_title">選べる、3つの講座。</h2>
+      <p class="sub" data-i18n="c_sub">各回とも土・日の2日間。気になる1講座だけの参加もOK。会場はすべて渋谷サクラステージのSTATIOです。</p>
+    </div>
+    <div class="courses">
+      <article class="course c1">
+        <div class="cap-top">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M20 44l-8 8V26a10 10 0 0110-10h24a10 10 0 0110 10v6a10 10 0 01-10 10H20z" stroke="#149e67" stroke-width="3" stroke-linejoin="round"/><circle cx="26" cy="29" r="2.6" fill="#149e67"/><circle cx="34" cy="29" r="2.6" fill="#149e67"/><circle cx="42" cy="29" r="2.6" fill="#149e67"/></svg>
+          <span class="qname" data-i18n="c1_name">SNSマネージャー<br>資格対策講座</span>
+        </div>
+        <div class="body">
+          <span class="date">8.1 SAT – 8.2 SUN</span>
+          <h3 data-i18n="c1_ttl">現役SNS運用者から学ぶ ソーシャルメディアマーケティング演習</h3>
+          <p class="foot" data-i18n="c1_cap">定員20名・初級SNSマネージャー</p>
+        </div>
+      </article>
+      <article class="course c2">
+        <div class="cap-top">
+          <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="16" stroke="#22a06b" stroke-width="3"/><circle cx="32" cy="32" r="8" stroke="#22a06b" stroke-width="3"/><circle cx="32" cy="32" r="2.4" fill="#22a06b"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6" stroke="#22a06b" stroke-width="3" stroke-linecap="round"/></svg>
+          <span class="qname" data-i18n="c2_name">ウェブ広告マネージャー<br>資格対策講座</span>
+        </div>
+        <div class="body">
+          <span class="date">8.8 SAT – 8.9 SUN</span>
+          <h3 data-i18n="c2_ttl">事例で学ぶ インターネット広告基礎</h3>
+          <p class="foot" data-i18n="c2_cap">定員20名・初級ウェブ広告マネージャー</p>
+        </div>
+      </article>
+      <article class="course c3">
+        <div class="cap-top">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M14 46h36" stroke="#e08b14" stroke-width="3" stroke-linecap="round"/><rect x="18" y="34" width="7" height="10" rx="1.5" fill="#f0a534"/><rect x="30" y="26" width="7" height="18" rx="1.5" fill="#f0a534"/><rect x="42" y="18" width="7" height="26" rx="1.5" fill="#f0a534"/><path d="M18 30l12-8 8 5 12-11" stroke="#e08b14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="qname" data-i18n="c3_name">ウェブ解析士<br>資格対策講座</span>
+        </div>
+        <div class="body">
+          <span class="date">8.22 SAT – 8.23 SUN</span>
+          <h3 data-i18n="c3_ttl">ウェブ解析に学ぶ デジタルマーケティングでのデータ活用実務講座</h3>
+          <p class="foot" data-i18n="c3_cap">定員20名・ウェブ解析士</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="bene">
+      <h3 data-i18n="b_title">🎁 在学生特典</h3>
+      <ul>
+        <li><span class="big" data-i18n="b1_big">受講料・テキスト 無料</span><span data-i18n="b1_txt">通常 講座33,000円（公式テキストPDF 4,000円分込み）→ 0円</span></li>
+        <li><span class="big" data-i18n="b2_big">受験料 半額</span><span data-i18n="b2_txt">認定試験（在宅オンラインCBT）が在学生特別価格に</span></li>
+        <li><span class="big" data-i18n="b3_big">就活で語れる</span><span data-i18n="b3_txt">取得資格は履歴書・エントリーシートに記載OK。ガクチカに直結</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Details</span><h2 data-i18n="ov_title">開催概要</h2></div>
+    <div class="ov">
+      <dl>
+        <div class="rowi"><dt data-i18n="ov1k">対象</dt><dd data-i18n="ov1v">日本経済大学 在学生（学部・学年不問）</dd></div>
+        <div class="rowi"><dt data-i18n="ov2k">日程</dt><dd data-i18n="ov2v">第1回 8/1（土）・2（日）／第2回 8/8（土）・9（日）／第3回 8/22（土）・23（日）</dd></div>
+        <div class="rowi"><dt data-i18n="ov3k">時間</dt><dd data-i18n="ov3v">各日 13:00〜17:00（受付12:30〜）</dd></div>
+        <div class="rowi"><dt data-i18n="ov4k">会場</dt><dd data-i18n="ov4v">日本経済大学 STATIO（渋谷サクラステージ 8F）／渋谷駅から徒歩1分</dd></div>
+        <div class="rowi"><dt data-i18n="ov5k">費用</dt><dd data-i18n="ov5v">受講料・公式テキスト（PDF）は無料。認定試験の受験料は半額</dd></div>
+        <div class="rowi"><dt data-i18n="ov6k">資格認定</dt><dd data-i18n="ov6v">受講後、在宅オンライン試験（CBT）に合格するとWACA認定資格を付与</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply" style="padding:40px 0">
+  <div class="final">
+    <span class="eyebrow" style="color:#7fe8b9;justify-content:center">Apply now</span>
+    <h2 data-i18n="a_title">この夏、渋谷で。<br>最初の一歩を。</h2>
+    <p data-i18n="a_sub">各講座 定員20名の事前予約制です。定員に達し次第、締め切ります。</p>
+    <div class="form-embed">
+      <iframe title="お申し込みフォーム" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=tKh9X76ZUU-LOoexZa-EvANYBBhxQD1LjZF61jvh9eZUNUpIQVFRSlFWUzdVU0c5WlpWRlBWRURYWS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="apply-alt">
+      <a class="btn js-apply-form" href="https://forms.cloud.microsoft/r/E1J6bSJxmk" target="_blank" rel="noopener" style="font-size:1.05rem" data-i18n="a_btn">別ウィンドウでフォームを開く</a>
+      <div class="qr-block">
+        <span class="qr-head" data-i18n="a_qr_head">WACA認定 デジタルマーケティング資格取得講座<br>参加申込（在学生）</span>
+        <img src="qr-student.svg" alt="QR" width="170" height="170" loading="lazy">
+        <span class="qr-cap" data-i18n="a_qr_cap">スマホで読み取って友達にもシェア</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-logos">
+      <a class="foot-logo-chip" href="https://www.jue.ac.jp/" target="_blank" rel="noopener"><img src="logo-jue.svg" alt="日本経済大学"></a>
+      <a class="foot-logo-chip" href="https://www.waca.or.jp/" target="_blank" rel="noopener"><img src="logo-waca-white.png" alt="WACA"></a>
+    </div>
+    <p><span data-i18n="ft1">主催：日本経済大学</span><br><span data-i18n="ft2">後援：一般社団法人ウェブ解析士協会（WACA）</span></p>
+    <p class="fine">© 2026 日本経済大学（都築学園グループ） — WACA認定 デジタルマーケティング資格取得講座</p>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  ja: {
+    nav_apply:"申し込む",
+    chip:"🎓 在学生は 受講料・テキスト無料／受験料 半額",
+    h1a:"いつものSNSを、", h1hl:'"就活の武器"', h1b:"に。", h1c:"夏の2日間で、公認資格。",
+    lead:"WACA公認の3資格（SNS／ウェブ広告／ウェブ解析士）を、渋谷サクラステージのSTATIOで。学部・学年不問。2026年8月開催。",
+    f1a:"受講", f1b:"無料", f2a:"受験料", f2b:"半額", f3a:"各講座 定員", f3b:"名", f4:"渋谷",
+    cta:"申し込む", cta_cap:"定員に達し次第、締め切ります。",
+    c_title:"選べる、3つの講座。",
+    c_sub:"各回とも土・日の2日間。気になる1講座だけの参加もOK。会場はすべて渋谷サクラステージのSTATIOです。",
+    c1_name:"SNSマネージャー<br>資格対策講座", c1_ttl:"現役SNS運用者から学ぶ ソーシャルメディアマーケティング演習", c1_cap:"定員20名・初級SNSマネージャー",
+    c2_name:"ウェブ広告マネージャー<br>資格対策講座", c2_ttl:"事例で学ぶ インターネット広告基礎", c2_cap:"定員20名・初級ウェブ広告マネージャー",
+    c3_name:"ウェブ解析士<br>資格対策講座", c3_ttl:"ウェブ解析に学ぶ デジタルマーケティングでのデータ活用実務講座", c3_cap:"定員20名・ウェブ解析士",
+    b_title:"🎁 在学生特典",
+    b1_big:"受講料・テキスト 無料", b1_txt:"通常 講座33,000円（公式テキストPDF 4,000円分込み）→ 0円",
+    b2_big:"受験料 半額", b2_txt:"認定試験（在宅オンラインCBT）が在学生特別価格に",
+    b3_big:"就活で語れる", b3_txt:"取得資格は履歴書・エントリーシートに記載OK。ガクチカに直結",
+    ov_title:"開催概要",
+    ov1k:"対象", ov1v:"日本経済大学 在学生（学部・学年不問）",
+    ov2k:"日程", ov2v:"第1回 8/1（土）・2（日）／第2回 8/8（土）・9（日）／第3回 8/22（土）・23（日）",
+    ov3k:"時間", ov3v:"各日 13:00〜17:00（受付12:30〜）",
+    ov4k:"会場", ov4v:"日本経済大学 STATIO（渋谷サクラステージ 8F）／渋谷駅から徒歩1分",
+    ov5k:"費用", ov5v:"受講料・公式テキスト（PDF）は無料。認定試験の受験料は半額",
+    ov6k:"資格認定", ov6v:"受講後、在宅オンライン試験（CBT）に合格するとWACA認定資格を付与",
+    a_title:"この夏、渋谷で。<br>最初の一歩を。",
+    a_sub:"各講座 定員20名の事前予約制です。定員に達し次第、締め切ります。",
+    a_btn:"別ウィンドウでフォームを開く",
+    a_qr_head:"WACA認定 デジタルマーケティング資格取得講座<br>参加申込（在学生）",
+    a_qr_cap:"スマホで読み取って友達にもシェア",
+    ft1:"主催：日本経済大学", ft2:"後援：一般社団法人ウェブ解析士協会（WACA）"
+  },
+  en: {
+    nav_apply:"Apply",
+    chip:"🎓 JUE students: tuition & textbook free / 50% off exam fee",
+    h1a:"Turn your everyday SNS ", h1hl:"into a career skill", h1b:".", h1c:"Get certified in one summer weekend.",
+    lead:"Three WACA-certified programs (Social Media / Digital Ads / Web Analytics) at STATIO, Shibuya Sakura Stage. All faculties and years welcome. August 2026.",
+    f1a:"Tuition", f1b:"FREE", f2a:"Exam fee", f2b:"50% OFF", f3a:"Seats per course: ", f3b:"", f4:"Shibuya",
+    cta:"Apply now", cta_cap:"Applications close when seats are filled.",
+    c_title:"Choose from three courses.",
+    c_sub:"Each course runs Saturday–Sunday. You can join just one course. All sessions are held at STATIO, Shibuya Sakura Stage.",
+    c1_name:"SNS Manager<br>Certificate Prep", c1_ttl:"Hands-on social media marketing, taught by working SNS professionals", c1_cap:"20 seats · Beginner SNS Manager",
+    c2_name:"Web Ad Manager<br>Certificate Prep", c2_ttl:"Fundamentals of internet advertising through real cases", c2_cap:"20 seats · Beginner Web Ad Manager",
+    c3_name:"Web Analytics Consultant<br>Certificate Prep", c3_ttl:"Practical data skills for digital marketing, based on web analytics", c3_cap:"20 seats · Web Analytics Consultant",
+    b_title:"🎁 Student Benefits",
+    b1_big:"Tuition & textbook FREE", b1_txt:"Normally ¥33,000 (incl. official PDF textbook worth ¥4,000) → ¥0",
+    b2_big:"Exam fee 50% off", b2_txt:"Certification exam (online CBT, taken from home) at a special student price",
+    b3_big:"Boost your job hunt", b3_txt:"Add the certificate to your resume and entry sheets — a real talking point",
+    ov_title:"Overview",
+    ov1k:"Eligibility", ov1v:"Students of Japan University of Economics (all faculties and years)",
+    ov2k:"Dates", ov2v:"Course 1: Aug 1–2 / Course 2: Aug 8–9 / Course 3: Aug 22–23 (Sat & Sun)",
+    ov3k:"Hours", ov3v:"13:00–17:00 each day (doors open 12:30)",
+    ov4k:"Venue", ov4v:"JUE STATIO, Shibuya Sakura Stage 8F — 1 min walk from Shibuya Station",
+    ov5k:"Fees", ov5v:"Tuition and official textbook (PDF) free; certification exam at half price",
+    ov6k:"Certification", ov6v:"Pass the at-home online exam (CBT) after the course to earn the WACA certificate",
+    a_title:"This summer, in Shibuya.<br>Take the first step.",
+    a_sub:"20 seats per course, first come first served. The application form is in Japanese.",
+    a_btn:"Open the application form",
+    a_qr_head:"WACA Digital Marketing Certificate Program<br>Application (JUE students)",
+    a_qr_cap:"Scan to share with a friend",
+    ft1:"Organizer: Japan University of Economics", ft2:"Supported by: Web Analytics Consultants Association (WACA)"
+  },
+  zh: {
+    nav_apply:"立即报名",
+    chip:"🎓 在校生 学费・教材免费／考试费半价",
+    h1a:"把日常的社交媒体，", h1hl:"变成求职的武器", h1b:"。", h1c:"一个夏天的周末，考取公认资格。",
+    lead:"WACA公认三大资格课程（社交媒体／网络广告／网站分析），在涩谷Sakura Stage的STATIO开讲。不限学部・年级。2026年8月举办。",
+    f1a:"听课", f1b:"免费", f2a:"考试费", f2b:"半价", f3a:"每讲座限", f3b:"名", f4:"涩谷",
+    cta:"立即报名", cta_cap:"名额有限，报满即止。",
+    c_title:"可选择的三门讲座。",
+    c_sub:"每期均为周六・周日两天，也可只参加一门。会场均在涩谷Sakura Stage的STATIO。",
+    c1_name:"SNS经理<br>资格备考讲座", c1_ttl:"向一线SNS运营者学习：社交媒体营销实战演习", c1_cap:"限20名・初级SNS经理",
+    c2_name:"网络广告经理<br>资格备考讲座", c2_ttl:"通过实际案例学习：互联网广告基础", c2_cap:"限20名・初级网络广告经理",
+    c3_name:"网站分析师<br>资格备考讲座", c3_ttl:"从网站分析学习：数字营销中的数据活用实务", c3_cap:"限20名・网站分析师",
+    b_title:"🎁 在校生特典",
+    b1_big:"学费・教材 免费", b1_txt:"原价33,000日元（含官方PDF教材4,000日元）→ 0日元",
+    b2_big:"考试费 半价", b2_txt:"认证考试（在家线上CBT）享受在校生特别价格",
+    b3_big:"助力求职", b3_txt:"所获资格可写入简历与求职材料，成为亮点",
+    ov_title:"活动概要",
+    ov1k:"对象", ov1v:"日本经济大学在校生（不限学部・年级）",
+    ov2k:"日期", ov2v:"第1期 8/1（六）・2（日）／第2期 8/8（六）・9（日）／第3期 8/22（六）・23（日）",
+    ov3k:"时间", ov3v:"每日 13:00〜17:00（12:30开始签到）",
+    ov4k:"会场", ov4v:"日本经济大学 STATIO（涩谷Sakura Stage 8F）／涩谷站步行1分钟",
+    ov5k:"费用", ov5v:"学费与官方教材（PDF）免费。认证考试费用半价",
+    ov6k:"资格认证", ov6v:"课程结束后，通过在家线上考试（CBT）即可获得WACA认证资格",
+    a_title:"这个夏天，在涩谷。<br>迈出第一步。",
+    a_sub:"每讲座限20名，需提前预约。报名表单为日语。",
+    a_btn:"打开报名表单",
+    a_qr_head:"WACA认证 数字营销资格课程<br>报名（在校生）",
+    a_qr_cap:"扫码分享给朋友",
+    ft1:"主办：日本经济大学", ft2:"支持：一般社团法人网站分析师协会（WACA）"
+  }
+};
+(function(){
+  function setLang(lang){
+    var dict = I18N[lang] || I18N.ja;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.getAttribute('data-i18n');
+      if(dict[k] !== undefined) el.innerHTML = dict[k];
+    });
+    document.documentElement.lang = (lang === 'zh' ? 'zh-CN' : lang);
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-lang') === lang);
+    });
+    try{ localStorage.setItem('lp-lang', lang); }catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+  });
+  var q = new URLSearchParams(location.search).get('lang');
+  var saved = null; try{ saved = localStorage.getItem('lp-lang'); }catch(e){}
+  var init = (q && I18N[q]) ? q : (saved && I18N[saved]) ? saved : 'ja';
+  if(init !== 'ja') setLang(init);
+})();
+</script>
+</body>
+</html>

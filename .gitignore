@@ -1,0 +1,8 @@
+# Claude Code ローカル個人設定・状態
+.claude/settings.local.json
+.claude/state/
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+.claude/.credentials.json
+.DS_Store
